@@ -1,0 +1,46 @@
+Project 2 ERD Code
+
+movie_info
+--
+id serial PK 
+title varchar(250)
+year int
+rating_id int FK >- film_rating.id
+genre_id int FK >- genre.id
+director varchar(300)
+box_office float
+runtime_mins int
+top_billed varchar(500)
+awards varchar(500)
+writer varchar(500)
+language_id int FK >- language.id
+country_id int FK >- country.id
+imdb_ratings float
+meta_score float
+imdb_rank int
+imdb_votes int
+last_updated timestamp
+
+film_rating
+--
+id serial PK
+mpaa_rating varchar(20)
+last_updated timestamp
+
+genre
+--
+id serial PK
+genre varchar(50)
+last_updated timestamp
+
+language
+--
+id serial PK
+language varchar(100)
+last_updated timestamp
+
+country
+--
+id seial PK
+country varchar(100)
+last_updated timestamp
